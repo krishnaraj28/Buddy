@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9e8a68;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            margin-top: 60px;
+            max-width: 600px;
+            padding: 40px;
+            background-color: #bade8e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid black;
+            margin-left: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border-bottom: 2px solid black;
+            padding: 10px 0;
+            position: relative; /* Add relative positioning */
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .cancel-button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size:10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .b_cancel{
+            background-color: #dc3545;
+            color: #fff;
+        }
+        .b_cancel:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    {% include 'usernavbar.html' %}
+
+    <div class="container">
+        <h1>Appointment List</h1>
+        <ul>
+            {% for appointment in appointments %}
+                <li>
+                    {{ appointment.slot }} - {{ appointment.status }} - {{ appointment.date}}
+                    <form method="post" action="{% url 'cancel_booking' appointment.id %}" class="cancel-button">
+                        {% csrf_token %}
+                        <button type="submit" class="b_cancel">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9e8a68;
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard-container {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #1e2459;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+        h1 {
+            color: #76a88b;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .dashboard-content {
+            padding: 30px;
+            color:#0f1210;
+            font-size:25px;
+            font-family:cursive;
+            border: 5px dashed black;
+            width:1000px;
+            margin: 50px auto;
+            text-align: center;
+
+
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 20px;
+            font-size: 16px;
+            background-color: #0B0646;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            align-items: center;
+        }
+        
+        .button:hover {
+            background-color: #0056b3;
+        }
+        /* Add more CSS styles as needed */
+    </style>
+</head>
+<body>
+    {% include 'usernavbar.html' %}
+    <div class="dashboard-container">
+        <h1>Welcome {{ user.username }}!</h1>
+    </div>
+        <div class="dashboard-content">
+        <p><center>Welcome to Buddy - Let's talk for a happier you!</center></br> Buddy is your go-to destination for mental well-being. Explore, learn, and grow with us as we journey towards a healthier mind, together. With Buddy by your side, you're never alone on the path to happiness and peace of mind.</p>
+        <a href="/quiz" class="button"><i class="fas fa-tasks"></i> Mood Check</a>
+
+    </div>
+
+    
+</body>
+</html>

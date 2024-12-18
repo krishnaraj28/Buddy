@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <style>
+        /* Add your CSS styles for the navbar */
+        
+        .navbar {
+            background-color: #1e2459;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #3d567a;
+            color: black;
+            transform: scale(1.1);
+
+        }
+        .navbar a.active {
+            background-color: #26a69a;
+            color: white;
+        }
+        .logout-form {
+            margin-left: auto;
+            display: inline-block; /* Ensure the form and button are displayed inline */
+        }
+        .logout-button {
+            margin-left:500px;
+            margin-top:10px;
+            padding: 10px 15px; /* Adjust padding as needed */
+            font-size: 15px; /* Adjust font size as needed */
+            background-color: #ff5733; /* Set background color */
+            color: #fff; /* Set text color */
+            border: none; /* Remove border */
+            border-radius: 4px; /* Apply border radius for rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s ease; /* Add transition effect */
+        }
+        .logout-button:hover {
+            background-color: #ff7f58; /* Change background color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="/userdashboard" style="color: #fff;">Dashboard</a> <!-- Set color for this hyperlink -->
+        <a href="/account" style="color: #fff;">My Account</a> <!-- Set color for this hyperlink -->
+        <a href="/upcoming_events" style="color: #fff;">Upcoming Events</a> <!-- Set color for this hyperlink -->
+        <a href="/resourselist/" style="color: #fff;">Resources</a> <!-- Set color for this hyperlink -->
+        <a href="/searchresourse/" style="color: #fff;">Search Resources</a> <!-- Set color for this hyperlink -->
+        <a href="/book" style="color: #fff;">Book An Appointment</a> <!-- Set color for this hyperlink -->
+
+        <!-- Add more navbar links as needed -->
+        <form class="logout-form" action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button class="logout-button" type="submit">Logout</button>
+        </form>
+    </div>
+
+</body>
+</html>

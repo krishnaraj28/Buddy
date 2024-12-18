@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upcoming Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9e8a68;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            padding: 50px;
+        }
+        .event{
+            border: 3px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #bade8e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .event-details {
+            margin-left: 20px;
+        }
+        .event-details p {
+            margin-bottom: 10px;
+        }
+        .event-details strong {
+            color: #333;
+        }
+        .location-icon {
+            color: #007bff;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'usernavbar.html' %}
+
+    <h1>Upcoming Events</h1>
+    <div class=container>
+    <ul>
+    {% for event in upcoming_events %}
+        <li>
+            <div class="event">
+                <h2>{{ event.title }}</h2>
+                <div class="event-details">
+                    <p><i class="fas fa-info-circle"></i> <strong>Description:</strong> {{ event.description }}</p>
+                    <p><i class="far fa-calendar-alt"></i> <strong>Date and Time:</strong> {{ event.date_time }}</p>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> <strong>Location:</strong> {{ event.location }}</p>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

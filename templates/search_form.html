@@ -1,0 +1,64 @@
+<!-- search_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resource Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9e8a68;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .search {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #bade8e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid black;
+
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: black;
+            font-weight: bold;
+        }
+        
+        .search-button{
+            background-color: #1e2459;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .search-button:hover {
+            background-color: #12203d;
+        }
+    </style>
+</head>
+<body>
+    {% include 'usernavbar.html' %}
+
+    <h1>Resource Search</h1>
+    <div class="search">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="search-button"><i class="fas fa-search"></i> Search</button>
+
+    </form>
+</div>
+</body>
+</html>

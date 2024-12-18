@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #bade8e;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .result-icon {
+            font-size: 100px;
+            color: #e30e0e;
+            margin-bottom: 20px;
+            animation: rotateIn 1s ease forwards
+        }
+        @keyframes rotateIn {
+            from {
+                transform: rotate(-180deg);
+                opacity: 0;
+            }
+            to {
+                transform: rotate(0);
+                opacity: 1;
+            }
+        }
+        p {
+            font-size: 24px;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .funny-text {
+            font-size: 18px;
+            color:black;
+            font-style: italic;
+            animation: slideIn 3s ease forwards;
+
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 5px solid black;
+            animation: fadeIn 5s ease forwards;
+
+
+        } 
+        .message {
+            font-size: 50px;
+            color:#e30e0e ;
+            margin-bottom: 30px;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    {% include 'usernavbar.html' %}
+
+    <h2>Quiz Result</h2>
+    <i class="far fa-grin-beam result-icon"></i>
+    <p class="funny-text">Keep smiling! Remember, laughter is the best medicine.</p>
+
+    <div class="container">
+        <p class="message"><i class="fas fa-heartbeat"></i></p> 
+    <p>{{ message }}</p>
+    </div>
+</body>
+</html>

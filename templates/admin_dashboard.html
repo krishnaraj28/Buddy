@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9e8a68;
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard-container {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1e2459;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #76a88b;
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: 30px;
+            color:black;
+            font-size:25px;
+            font-family:cursive;
+            border: 5px dashed black;
+            width:1000px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        
+        .quote {
+            margin-top: 40px;
+            padding: 20px;
+            color: black;
+            border-radius: 8px;
+            
+        }
+        .quote p {
+            font-style: italic;
+            font-size: 25px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    {% include 'adminnavbar.html' %}
+
+    </div>
+    <div class="dashboard-container">
+        <h1><center>Welcome {{ user.username }}!</center></h1>
+        
+        <!-- Other content of the admin dashboard -->
+    </div>
+    <div class="content">
+        <p>Here, you can manage all the appointments with ease.</br> Stay organized and keep track of all your tasks.</p>
+    </div>
+    <div class="quote">
+        <center> <p>"The only way to do great work is to love what you do." - Steve Jobs</p>
+         Stay motivated and keep striving for excellence!</center>
+    </div>
+ 
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* CSS styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #470A63;
+            text-align: center;
+        }
+
+        .navbar {
+            /* Use a gradient for the navbar background */
+            background-color: rgba(128, 203, 196, 0.8);
+
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            /* Add a transition for the hover effect */
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #4db6ac;
+            color: black;
+            transform: scale(1.1);
+
+        }
+
+        .navbar a.active {
+            /* Use a darker shade of blue for the active link */
+            background-color: #26a69a;
+            color: white;
+        }
+
+        /* Content styles */
+        .container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: #CEA8B8;
+            /* Add some box-shadow and border-radius for the container */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+            border-radius: 10px;
+            text-align: justify; /* Justify the text */
+            border: 5px solid black;
+
+        }
+
+        h1 {
+            color: #333;
+            /* Use a different font for the heading */
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 2.5em;
+            text-align:center;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px; /* Add some space between paragraphs */
+            color:#150330;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="/home"><i class="fas fa-home"></i> Home</a>
+        <a class="active" href="/about"><i class="fas fa-info-circle"></i> About</a>
+        <a href="/service"><i class="fas fa-hands-helping"></i> Services</a>
+        <a href="/event_list"><i class="fas fa-calendar"></i> Events</a>
+        <a href="/faculty"> <i class="fas fa-user-md"></i> Specialist</a>
+
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to our website! We are dedicated to providing support, resources, and a community for mental health and well-being.</p>
+        <p>Our mission is to raise awareness about mental health issues, promote positive mental health practices, and offer a range of services to support individuals on their mental health journey.</p>
+        <p>At our core, we believe that everyone deserves to live a happier and healthier life. Join us as we work towards creating a world where mental health is prioritized and supported.</p>
+    </div>
+</body>
+</html>

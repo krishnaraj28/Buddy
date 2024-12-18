@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Profile</title>
+    <style>
+        /* CSS styles for the button class */
+        .form-button {
+            background-color: black;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-left:200px;
+        }
+        .form-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Other CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9e8a68;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            color: #033F26;
+            background-color: #265d5e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: black;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="file"] {
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'adminnavbar.html' %}
+
+    <h1>Create Profile</h1>
+    <div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="id_full_name">Full Name:</label>
+        {{ form.full_name }}
+        <label for="id_bio">Bio:</label>
+        {{ form.bio }}
+        <label for="id_image">Image:</label>
+        {{ form.image }}
+        <!-- Apply the form-button class to the button element -->
+        <button type="submit" class="form-button">Save</button>
+    </form>
+</div>
+</body>
+</html>

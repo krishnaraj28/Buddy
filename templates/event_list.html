@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #470A63;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color:#CEA8B8 ;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 5px solid black;
+
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .event {
+            border-bottom: 2px solid black;
+            padding: 20px 0;
+
+        }
+        .event:last-child {
+            border-bottom: none;
+        }
+        .event-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .event-details {
+            color: #150330;
+            font-size: 14px;
+        }
+        .event-created-by {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+        {% include 'homenavbar.html' %}
+        <div class="container">
+
+        <h1>Event List</h1>
+        {% for event in events %}
+            <div class="event">
+                <div class="event-title">{{ event.title }}</div>
+                <div class="event-details">
+                    <p><strong>Description:</strong> {{ event.description }}</p>
+                    <p><strong>Date and Time:</strong> {{ event.date_time }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

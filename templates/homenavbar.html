@@ -1,0 +1,44 @@
+<!-- navbar.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .navbar {
+            background-color: #4db6ac;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #4db6ac;
+            color: black;
+            transform: scale(1.1);
+
+        }
+        .navbar a.active {
+            background-color: #26a69a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a class="active" href="/home"><i class="fas fa-home"></i> Home</a>
+    <a href="/about"><i class="fas fa-info-circle"></i> About</a>
+    <a href="/service"><i class="fas fa-hands-helping"></i> Services</a>
+    <a href="/event_list"><i class="fas fa-calendar"></i> Events</a>
+    <a href="/faculty"> <i class="fas fa-user-md"></i> Specialist</a>
+</div>
+
+</body>
+</html>

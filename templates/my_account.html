@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Add your CSS styles for the My Account page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9e8a68;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .account-info {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #5e094b;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .account-info p {
+            margin-bottom: 10px;
+            color: #e8c5e3; /* Adjust text color */
+        }
+        .account-info p strong {
+            margin-right: 10px;
+            color: #333; /* Adjust strong text color */
+        }
+        
+    </style>
+</head>
+<body>
+    {% include 'usernavbar.html' %}
+
+    <h1>My Account</h1>
+
+    <div class="account-info">
+        <p><i class="fas fa-user icon"></i> <strong>:</strong>{{ custom_user.first_name }} {{ custom_user.last_name }}</p>
+        <p><i class="fas fa-envelope icon"></i> <strong>:</strong>{{ custom_user.email }}</p>
+        <p><i class="fas fa-birthday-cake icon"></i> <strong>:</strong>{{ custom_user.birth_date }}</p>
+        <p><i class="fas fa-venus-mars icon"></i> <strong>:</strong>{{ custom_user.gender }}</p>
+        <!-- Add other fields as needed -->
+    </div>
+
+</body>
+</html>
