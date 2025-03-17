@@ -8,7 +8,7 @@ The project is built using Python and the Django framework, aiming to seamlessly
 2. **Medical Practitioner/Admin Interface**: For qualified professionals to provide assistance.
 
 This project is a step toward making the world a happier place.
-🚀## **Main Features - Overview**
+## 🚀**Main Features - Overview**
 
 - **Simple Mood Tracker**: Track your emotional well-being effortlessly.
 - **Resource Access**: Explore a wealth of resources, articles, and tips to manage mental health effectively.
